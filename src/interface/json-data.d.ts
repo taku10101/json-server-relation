@@ -10,9 +10,9 @@ export function convertToPropertyTypes<T>(obj: T): ConvertToPropertyTypes<T> {
   const result: any = {};
   for (const key in obj) {
     if (obj[key] === undefined) {
-      result[key] = { value: null };
+      result[key] = null;
     } else {
-      result[key] = { value: obj[key] };
+      result[key] = obj[key];
     }
   }
   return result;
